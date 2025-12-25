@@ -1,16 +1,10 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title> First App </ion-title>
+    <ion-title>First App</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">IONIC APP</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content class="ion-padding">
   <div id="container">
     <strong class="text-color">Welcome to IONIC App</strong>
     <p>
@@ -22,5 +16,20 @@
         >UI Components</a
       >
     </p>
+  </div>
+
+  <div class="form-container">
+    <ion-item>
+      <ion-input
+        label="Enter your message"
+        labelPlacement="floating"
+        placeholder="Type something..."
+        [(ngModel)]="message"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="showAlert()">
+      Show Message
+    </ion-button>
   </div>
 </ion-content>
